@@ -388,7 +388,7 @@ form .btn2 {
     }
     #header{
         background-image: url(phonebg.png);
-        background-attachment:fixed;
+        background-attachment:scroll;
     }
     .headertext {
         margin-top: 100%;
