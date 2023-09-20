@@ -7,6 +7,12 @@ const emailInput=document.getElementById("email");
 const submitButton = document.getElementById("submitButton");
 const nameInput = document.getElementById("name");
 const msgs = document.getElementById("msg");
+const themeToAqua = document.getElementById("Aqua");
+const themeToMagenta = document.getElementById("Magenta");
+const themeToOrange = document.getElementById("Orange");
+const themeToGreen = document.getElementById("Green");
+var r = document.querySelector(':root');
+var logoImage = document.getElementById("homelogo");
 
 
 submitButton.addEventListener("mouseover", (button)=> {
@@ -19,21 +25,49 @@ submitButton.addEventListener("mouseover", (button)=> {
             submitButton.style.borderColor = "red";
             msgs.style.color = "red"
             msgs.innerHTML = "Please enter a valid E-mail!"
+            setTimeout(() => {
+                msg.innerHTML = "";
+            }, 5000);
         }
         else {
             submitButton.style.left = "0%";
             msgs.style.color = "red"
             msgs.innerHTML = "Please enter a valid E-mail!"
+            setTimeout(() => {
+                msg.innerHTML = "";
+            }, 5000);
             submitButton.style.background = "red";
             submitButton.style.borderColor = "red";
         }
     }
     else {
-        submitButton.style.background = "aqua";
+        submitButton.style.background = "var(--theme-color)";
         msgs.innerHTML = "";
-        submitButton.style.borderColor = "aqua";
+        submitButton.style.borderColor = "var(--theme-subcolor)";
     }
 })
+
+themeToAqua.addEventListener("click",()=> {
+    logoImage.src = "logo.png";
+    r.style.setProperty('--theme-color', 'aqua');
+    r.style.setProperty('--theme-subcolor','#47aeb5')
+})
+themeToMagenta.addEventListener("click",()=> {
+    logoImage.src = "logo_magenta.png";
+    r.style.setProperty('--theme-color', 'magenta');
+    r.style.setProperty('--theme-subcolor','#6f0792')
+})
+themeToOrange.addEventListener("click",()=> {
+    logoImage.src = "logo_orange.png";
+    r.style.setProperty('--theme-color', 'orange');
+    r.style.setProperty('--theme-subcolor','#794603')
+})
+themeToGreen.addEventListener("click",()=> {
+    logoImage.src = "logo_green.png";
+    r.style.setProperty('--theme-color', '#02cf02');
+    r.style.setProperty('--theme-subcolor','#178102')
+})
+
 
 btn[0].onclick = function() {
     slide.style.transform = "translateX(0px)";

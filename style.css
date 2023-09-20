@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 :root {
-  --theme-color1 : aqua;
+  --theme-color : aqua;
+  --theme-subcolor: #47aeb5;
 }
 * {
   margin: 0;
@@ -59,7 +60,7 @@ nav ul li a::after {
   content: "";
   width: 0%;
   height: 3px;
-  background: var(--theme-color1);
+  background: var(--theme-color);
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -76,13 +77,14 @@ nav ul li a:hover::after {
   color: white;
 }
 
+
 .headertext h1 {
   font-size: 60px;
   margin-top: 20px;
 }
 
 .headertext h1 span {
-  color: var(--theme-color1);
+  color: var(--theme-color);
 }
 
 #about {
@@ -134,7 +136,7 @@ nav ul li a:hover::after {
   content: "";
   width: 0%;
   height: 3px;
-  background: var(--theme-color1);
+  background: var(--theme-color);
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -150,7 +152,7 @@ nav ul li a:hover::after {
 }
 
 .tabcontents span {
-  color: #47aeb5;
+  color: var(--theme-subcolor);
   font-size: 18px;
 }
 
@@ -199,8 +201,31 @@ nav ul li a:hover::after {
 }
 
 .serviceslist div:hover {
-  background: var(--theme-color1);
+  background: var(--theme-color);
   transform: translateY(-10px);
+  color:rgb(72, 104, 112);
+}
+.serviceslist div:hover #ServicesMore1{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.4s, font-size 0.4s;
+}
+.serviceslist div:hover #ServicesMore2{
+  color: rgb(0, 0, 0);;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.4s, font-size 0.4s;
+}
+.serviceslist div:hover #ServicesMore3{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.4s, font-size 0.4s;
+}
+#ServicesMore1, #ServicesMore2, #ServicesMore3{
+  color: var(--theme-color);
+  font-weight: bold;
 }
 
 #portfolio {
@@ -232,7 +257,7 @@ nav ul li a:hover::after {
 .layer {
   width: 100%;
   height: 0%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), var(--theme-color1));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), var(--theme-color));
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -255,7 +280,7 @@ nav ul li a:hover::after {
 
 .layer a {
   margin-top: 20px;
-  color: #47aeb5;
+  color: var(--theme-subcolor);
   text-decoration: none;
   font-size: 20px;
   line-height: 60px;
@@ -276,7 +301,7 @@ nav ul li a:hover::after {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid var(--theme-color1);
+  border: 1px solid var(--theme-color);
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
@@ -285,7 +310,7 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-  background: rgb(15, 182, 182);
+  background: var(--theme-subcolor);
   cursor: pointer;
 }
 
@@ -307,7 +332,7 @@ nav ul li a:hover::after {
 }
 
 .contactleft p i {
-  color: var(--theme-color1);
+  color: var(--theme-color);
   margin-right: 10px;
   font-size: 20px;
 }
@@ -326,13 +351,13 @@ nav ul li a:hover::after {
 }
 
 .socialicons a:hover {
-  color: var(--theme-color1);
+  color: var(--theme-color);
   transform: translateY(-5px);
 }
 
 .btn2 {
     display: inline-block;
-    background: var(--theme-color1) ;
+    background: var(--theme-color) ;
 }
 
 .contactright form {
@@ -398,7 +423,7 @@ form .btn2 {
         font-size: 30px;
     }
     nav ul{
-        background: var(--theme-color1);
+        background: var(--theme-color);
         position: fixed;
         top:0;
         right:-200px;
@@ -482,7 +507,7 @@ form .btn2 {
 }
 
 .usertext {
-  background: var(--theme-color1);
+  background: var(--theme-color);
   color:rgb(57, 64, 70);
   width: 520px;
   height: 270px;
@@ -543,7 +568,7 @@ form .btn2 {
 
 .activebtn {
   width:45px;
-  background-color:var(--theme-color1);
+  background-color:var(--theme-color);
 }
 
 .testimonial {
@@ -587,6 +612,21 @@ form .btn2 {
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
+}
+#Magenta{
+  color: magenta;
+}
+#Aqua {
+  color: aqua;
+}
+#Orange {
+  color: orange;
+}
+#Green {
+  color: #02cf02;
+}
+#theme {
+  cursor: pointer;
 }
 
 @-webkit-keyframes glow {
